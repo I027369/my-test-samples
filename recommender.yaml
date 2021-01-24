@@ -1,0 +1,11 @@
+apiVersion: "serving.kubeflow.org/v1alpha2"
+kind: "InferenceService"
+metadata:
+ name: "recommender"
+ namespace: my-namespace
+spec:
+ default:
+   predictor:
+     tensorflow:
+       serviceAccount: default
+       storageUri: "s3://models/recommender"

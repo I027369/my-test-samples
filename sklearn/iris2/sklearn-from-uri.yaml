@@ -1,0 +1,9 @@
+apiVersion: serving.kubeflow.org/v1alpha2
+kind: InferenceService
+metadata:
+  name: sklearn-from-uri
+spec:
+  default:
+    predictor:
+      sklearn:
+        storageUri: https://github.com/I027369/ml-models/tree/main/sklearn/iris2/model.joblib?raw=true
